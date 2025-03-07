@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.clip-triangle {
+    clip-path: polygon(100% 100%, 100% 0, 40% 100%);
+    
+  }
+  /* Custom scrollbar */
+::-webkit-scrollbar {
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #F9BE08;
+  border-radius: 10px;
+}
