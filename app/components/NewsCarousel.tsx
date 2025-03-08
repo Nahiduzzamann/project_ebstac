@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 import img from "@/public/Images/pic.png";
 import { TfiEmail } from "react-icons/tfi";
+import ArticleCard from "./ArticleCard";
 
 const newsItems = [
   {
@@ -50,19 +50,19 @@ const NewsCarousel: React.FC = () => {
     autoplay: false,
     arrows: false,
     responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 2,
-          },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
         },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-          },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
         },
-      ],
+      },
+    ],
   };
 
   return (
@@ -76,20 +76,15 @@ const NewsCarousel: React.FC = () => {
           <Slider ref={(s) => setSlider(s)} {...settings}>
             {newsItems.map((item) => (
               <div key={item.id} className="">
-                <div className="relative rounded-lg overflow-hidden group cursor-pointer">
-                  <div className="">
-                    <Image
-                      src={img}
-                      alt={item.title}
-                      className="w-full h-[300px] object-cover transition-all duration-500 group-hover:brightness-75"
-                    />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="absolute bottom-5 left-5 text-white">
-                    <h3 className="text-lg font-bold">{item.title}</h3>
-                    <p className="text-sm mt-2">{item.description}</p>
-                  </div>
-                </div>
+                <ArticleCard
+                  type="Article"
+                  title={item.title}
+                  description={item.description}
+                  linkText="Read full article"
+                  imgSrc={img}
+                  href="/"
+                  color="text-white"
+                />
               </div>
             ))}
           </Slider>
@@ -113,7 +108,7 @@ const NewsCarousel: React.FC = () => {
       <section className=" text-white py-16 flex flex-col items-center">
         {/* Email Icon */}
         <div className="mb-2">
-        <TfiEmail className="text-7xl text-goldenYellow" />
+          <TfiEmail className="text-7xl text-goldenYellow" />
         </div>
 
         {/* Title */}
