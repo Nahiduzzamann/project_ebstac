@@ -17,7 +17,7 @@ type AccordionItemProps = {
 
 export default function AssuranceSection() {
   return (
-    <div className="container mx-auto py-12 px-3 flex flex-col md:flex-row justify-between items-center">
+    <div className="container mx-auto py-12 px-3 flex flex-col md:flex-row justify-between items-center gap-6">
       {/* Left Side (Text & Button) */}
       <div className="max-w-lg mb-6 md:mb-0">
         <h2 className="text-3xl font-light text-black">
@@ -72,7 +72,7 @@ function AccordionItem({ title, content, icon }: AccordionItemProps) {
           className={`flex items-center space-x-3 ${isOpen ? "underline" : ""}`}
         >
           {icon}
-          <span>{title}</span>
+          <span className="text-start">{title}</span>
         </div>
         <span
           className={`transform transition-transform duration-300 ${

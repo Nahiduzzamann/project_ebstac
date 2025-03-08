@@ -96,7 +96,7 @@ export default function WhereWeCanHelpSection() {
             className="bg-transparent outline-none text-lg w-full placeholder-white"
           />
           <button
-            className="absolute right-0 bg-teal-400 hover:bg-teal-600 transition-colors duration-300 px-5 py-2 font-semibold text-white"
+            className="absolute right-0 bg-goldenYellow hover:bg-yellow transition-colors duration-300 px-5 py-2 font-semibold text-white"
             style={{
               clipPath: "polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%)",
             }}
