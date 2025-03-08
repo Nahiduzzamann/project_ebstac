@@ -9,6 +9,7 @@ import WhereWeCanHelpSection from "@/app/components/WhereWeCanHelpSection";
 import WhyChooseSection from "@/app/components/WhyChooseSection";
 import AssuranceSection from "@/app/components/AssuranceSection";
 import NewsCarousel from "@/app/components/NewsCarousel";
+import CaseStudies from "@/app/components/CaseStudies";
 
 export default function UserHome() {
   return (
@@ -46,13 +47,15 @@ export default function UserHome() {
           />
         </div>
         {/* where we can help  */}
-       <WhereWeCanHelpSection></WhereWeCanHelpSection>
-       {/* why chose section  */}
-       <WhyChooseSection></WhyChooseSection>
-       {/* //////// */}
-       <AssuranceSection></AssuranceSection>
-       {/* slider  */}
-       <NewsCarousel></NewsCarousel>
+        <WhereWeCanHelpSection></WhereWeCanHelpSection>
+        {/* why chose section  */}
+        <WhyChooseSection></WhyChooseSection>
+        {/* //////// */}
+        <AssuranceSection></AssuranceSection>
+        {/* bg changer  */}
+        <CaseStudies></CaseStudies>
+        {/* slider  */}
+        <NewsCarousel></NewsCarousel>
       </div>
     </div>
   );
